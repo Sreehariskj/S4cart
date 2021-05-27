@@ -1,0 +1,31 @@
+<section>
+  <div class="container">
+  <div class="row justify-content-center align-items-center">
+<form class="col-md-5 p-3 bg-light" action="login-panel" method="post">
+  {{#if loginErr}}
+   <h5 class="error">{{loginErr}}</h5>
+  {{/if}}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Admin ID</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="Email">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password">
+  </div>
+  <div class="form-check d-flex ">
+  
+  <a href="#" class="ml-auto">Forgot Password?</a>
+  </div>
+  <div class="text-center p-2">
+  <button type="submit" class="btn btn-success w-50">login</button>
+  </div>
+    
+</form>
+  </div>
+  </div>
+</section>
+ 
+
+    

@@ -1,0 +1,55 @@
+    <header>
+      
+      <nav class="navbar navbar-dark bg-primary justify-content-between">
+        <div class="row">
+        <div class="ml-3"> 
+        <img src="images/logo.jpg" alt="" width="100" height="50">
+         </div>
+        <ul class="nav justify-content-end ml-2 pt-2">
+ {{#if user}}
+  <li class="nav-item">
+    <a class="nav-link text-white" href="/"><i class="fas fa-plus-square"></i></a>
+  </li>
+  {{/if}}
+  <li class="nav-item">
+    <a class="nav-link text-light" href="/cart"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-success w-50 pl-1"id="cart-count">{{cartCount}}</span></a>
+  </li>
+  <li class="nav-item">
+ <div class="dropdown">
+   <button class="btn btn-primary btn-sm dropdown-toggle mt-1 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{#if user}}
+        {{user.Name}}
+        {{else}}
+        Account
+     {{/if}}
+   </button>
+   <div class="dropdown-menu pl-1" style="min-width: 6rem;" aria-labelledby="dropdownMenuButton">
+      {{#if user}}
+         <a class="dropdown-item " href="/logout">logout</a>
+      {{else}}
+         <a class="dropdown-item " href="/login">login</a>
+      {{/if}}      
+     
+     <a class="dropdown-item" href="/signup">signup</a>
+    
+   </div>
+ </div>
+  </li>
+</ul>
+</div>
+    
+    
+        <form class="form-line w-100">
+     <div class="input-group">
+                   <span class="input-group-append bg-light border border-light rounded-left">
+                                       <div class="input-group-text bg-light"><i class="fa fa-search"></i></div>
+                                   </span>
+                 <input class="form-control py-2 pl-1 border-left-0 border " type="search" placeholder="Search for Products,Brand and More" id="example-search-input">
+                
+             </div>
+     
+         </div>
+            
+        </form>
+      </nav>
+    </header>

@@ -1,0 +1,30 @@
+<section>
+  <div class="container bg-secondary">
+ 
+        {{#each products}}
+        
+       <a href="/orderDetails/{{this._id}}" class="text-dark" style="text-decoration: none;">
+        <div class="row mt-1 pt-1 border-primary mb-4 bg-light">
+          
+       <div class="card-body border-secondary col-7 col-md-5">
+
+            <h5 class="card-title">{{this.product.Name}}</h5><h6>({{this.product.Description}})</h6>
+            <p></p>
+            <h5>₹{{this.product.Price}}</h5>
+           
+          </div>
+           <div class="card-img-top pt-4  col-4 col-md-2" style="width: 21rem;"> 
+               <div class="ml-4 bg-light">
+                    <img src="/product-images/{{this.product._id}}.jpg" class="card-img-top ml-auto" alt="" style="width:4rem;height:4rem;margin-left:5rem;">
+                 </div>
+          
+             </div>
+        <div class="col-1">
+           <h5 class="mt-5">></h5></div>
+   
+        </div>
+         </a>
+        {{/each}}
+      
+    </div>
+    </section>
