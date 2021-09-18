@@ -4,7 +4,7 @@
 This is a Dynamic Shopping cart website <br>
 ## Features
 * Responsive
-• Flipkart clone UI
+* Flipkart clone UI
 * Fully functional e-commerce app
 * Includes payment methods both online and COD
 
