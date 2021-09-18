@@ -15,10 +15,10 @@
                <div class="ml-4 bg-light">
                     <img src="/product-images/{{this.product._id}}.jpg" class="card-img-top ml-auto" alt="" style="width:4rem;height:4rem;margin-left:5rem;">
                  </div>
-              <div class="p-3">
-              <button class="cart-item-count mr-2" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button>
+              <div class="p-2">
+              <button class="btn cart-item-count mr-2" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button>
                        <span id="{{this.product._id}}">{{this.quantity}}</span>
-               <button class="cart-item-count ml-2" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button>  
+               <button class="btn cart-item-count ml-2" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button>  
               </div>   
              </div>
              
