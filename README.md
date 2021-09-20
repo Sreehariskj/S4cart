@@ -1,5 +1,12 @@
-# S4cart
+#### website link : https://s4cart.herokuapp.com/
+
+## S4cart
 This is a Dynamic Shopping cart website <br>
-• Fully functional flipkart ui model
+
+### Features
+* Responsive
+* Flipkart clone UI
+* Fully functional e-commerce app
+* Includes payment methods both online and COD
 
   
