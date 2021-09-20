@@ -46,7 +46,7 @@ router.post('/signup',(req,res)=>{
    
     req.session.admin=response
     req.session.admin.loggedIn=true
-    res.redirect('/')
+    res.redirect('/login')
   })
 }) 
 router.post('/login',(req,res)=>{
@@ -74,7 +74,7 @@ router.get('/cart',verifyLogin,async(req,res)=>{
   let totalValue =0
   if(products.length>0){
    totalValue=await userHelpers.getTotalAmount(req.session.user._id)}
- //console.log(totalValue)
+ 
   
  
   res.render('user/cart' ,{products,user:req.session.user,totalValue})
@@ -157,8 +157,8 @@ router.get('/orderDetails/:id',verifyLogin,async(req,res)=>{
   res.render('user/orderDetails',{user:req.session.user,order,products})
   //console.log(order)
 })
-router.get('/profile', (req, res) => {
-  res.render('user/profile',{User:req.session.user})
+router.get('/profile',verifyLogin, (req, res) => {
+  res.render('user/profile',{user:req.session.user})
 })
 
 module.exports = router;

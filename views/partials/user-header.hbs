@@ -24,12 +24,14 @@
      {{/if}}
    </button>
    <div class="dropdown-menu pl-1" style="min-width: 6rem;" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/profile">profile</a>     
       {{#if user}}
          <a class="dropdown-item " href="/logout">logout</a>
       {{else}}
          <a class="dropdown-item " href="/login">login</a>
       {{/if}}      
      
+    
      <a class="dropdown-item" href="/signup">signup</a>
     
    </div>

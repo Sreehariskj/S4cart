@@ -143,9 +143,11 @@ module.exports={
     details.quantity=parseInt(details.quantity)
     return new Promise((resolve,reject)=>{
       if(details.count==-1 && details.quantity==1){
+         
         db.get().collection(collection.CART_COLLECTION).updateOne({_id:objectId(details.cart)},{
           $pull:{products:{item:objectId(details.product)}}
         }).then((response)=>{
+            
           resolve({removeProduct:true})
         })
         
@@ -213,9 +215,11 @@ getTotalAmount:(userId)=>{
           }
         }
         ]).toArray()
-       
-        resolve(total[0].total)
-        
+      if(total[0]){
+        resolve(total[0].total)}
+        else{
+            resolve(null)
+        }
     })
   
 },

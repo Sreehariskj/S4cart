@@ -38,6 +38,7 @@
     </div>
     
     <div class="col-12">
+     {{#if totalValue}}
     <table class="w-100">
         <tr>
                      <td><h5><span id="total">₹ {{totalValue}}</span></h5>
@@ -52,12 +53,18 @@
             </tr>
           
           </table>
+          {{else}}
+          <div class="pt-5">
+          <h5 class="text-center text-secondary">cart is empty</h5>
+          </div>
+          {{/if}}
     </div>
     
 </section>
 <script>
   function changeQuantity(cartId, proId,userId, count){
     let quantity=parseInt(document.getElementById(proId).innerHTML)
+    count =parseInt(count)
     $.ajax({
       url: '/change-product-quantity',
       data: {
@@ -69,7 +76,9 @@
       },
       method: 'post',
       success: (response) => {
+          console.log(response)
        if(response.removeProduct){
+           console.log("hii")
          alert('Product removed from cart')
          location.reload()
        }else{
